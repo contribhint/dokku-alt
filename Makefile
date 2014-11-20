@@ -1,4 +1,4 @@
-DOKKU_VERSION ?= 0.3.0
+DOKKU_VERSION ?= 0.3.1
 DOKKU_ROOT ?= /home/dokku
 PLUGINHOOK_URL ?= https://s3.amazonaws.com/progrium-pluginhook/pluginhook_0.1.0_amd64.deb
 SIGN_KEY ?= EAD883AF
