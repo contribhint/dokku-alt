@@ -88,20 +88,20 @@ dpkg_beta:
 	make dpkg_commit DEB_NAME=dokku-alt-beta
 
 docker_build: FORCE
-	docker build -t ayufan/dokku-alt .
+	docker build -t contribhint/dokku-alt .
 
 docker_run: docker_build
 	docker run --privileged --rm -i -t \
 		-v /home/dokku -v /var/lib/docker \
-		--hostname="dokku.me" \
-		ayufan/dokku-alt
+		--hostname="dokku.tk" \
+		contribhint/dokku-alt
 
 docker_tests:
 	-docker run -v /var/lib/docker --name="dokku-alt-docker-volume-data" busybox:latest true
 	docker run --privileged --rm -i -t \
 		--volumes-from dokku-alt-docker-volume-data \
-		--hostname="dokku.me" \
-		ayufan/dokku-alt \
+		--hostname="dokku.tk" \
+		contribhint/dokku-alt \
 		/srv/dokku-alt/tests/run_localhost $(TESTS)
 
 pull:
